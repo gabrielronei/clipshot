@@ -9,7 +9,7 @@ services:
       - "3308:3306"
     environment:
       MYSQL_ROOT_PASSWORD: very_secure_password
-      MYSQL_DATABASE: clipshot-users
+      MYSQL_DATABASE: clipshot
       MYSQL_PASSWORD: very_secure_password
     networks:
       - default

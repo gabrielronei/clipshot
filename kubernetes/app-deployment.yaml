@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clipshot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clipshot
+  template:
+    metadata:
+      labels:
+        app: clipshot
+    spec:
+      containers:
+        - name: clipshot-app
+          image: gabrielronei/clipshot:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: app-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clipshot
+spec:
+  type: ClusterIP
+  selector:
+    app: clipshot
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

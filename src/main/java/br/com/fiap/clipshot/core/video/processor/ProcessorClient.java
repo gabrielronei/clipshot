@@ -9,8 +9,11 @@ import org.springframework.web.client.RestClient;
 @Service
 public class ProcessorClient {
 
-    @Value("{clipshot.token}")
+    @Value("${clipshot.token}")
     private String token;
+
+    @Value("${clipshot.processor.url}")
+    private String url;
 
     private final RestClient restClient;
 
@@ -20,7 +23,7 @@ public class ProcessorClient {
 
     public VideoProcessorResponse findAllBy(UserEntity user) {
         return this.restClient.get()
-                .uri("/user/%s".formatted(user.getId()))
+                .uri("/video-processor/user/%s".formatted(user.getId()))
                 .header("Authorization", "Bearer " + token)
                 .retrieve()
                 .body(VideoProcessorResponse.class);
@@ -28,7 +31,7 @@ public class ProcessorClient {
 
     public VideoResponse findBy(Video video) {
         return this.restClient.get()
-                .uri("/user/%s/video/%s".formatted(video.getUser().getId(), video.getId()))
+                .uri("/video-processor/user/%s/video/%s".formatted(video.getUser().getId(), video.getId()))
                 .header("Authorization", "Bearer " + token)
                 .retrieve().body(VideoResponse.class);
     }
