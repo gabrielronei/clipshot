@@ -2,11 +2,16 @@ package br.com.fiap.clipshot.core.video.processor;
 
 import br.com.fiap.clipshot.core.user.infraestructure.UserEntity;
 import br.com.fiap.clipshot.core.video.Video;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 @Service
 public class ProcessorClient {
+
+    @Value("{clipshot.token}")
+    private String token;
+
     private final RestClient restClient;
 
     public ProcessorClient() {
@@ -14,10 +19,17 @@ public class ProcessorClient {
     }
 
     public VideoProcessorResponse findAllBy(UserEntity user) {
-        return this.restClient.get().uri("/user/%s".formatted(user.getId())).retrieve().body(VideoProcessorResponse.class);
+        return this.restClient.get()
+                .uri("/user/%s".formatted(user.getId()))
+                .header("Authorization", "Bearer " + token)
+                .retrieve()
+                .body(VideoProcessorResponse.class);
     }
 
     public VideoResponse findBy(Video video) {
-        return this.restClient.get().uri("/user/%s/video/%s".formatted(video.getUser().getId(), video.getId())).retrieve().body(VideoResponse.class);
+        return this.restClient.get()
+                .uri("/user/%s/video/%s".formatted(video.getUser().getId(), video.getId()))
+                .header("Authorization", "Bearer " + token)
+                .retrieve().body(VideoResponse.class);
     }
 }
