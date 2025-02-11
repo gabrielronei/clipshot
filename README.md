@@ -19,6 +19,10 @@
   <img src="https://media.dashdevs.com/images/shooting10.jpg" width="450px"/>
 </div>
 
+## Desenho macro arquitetura
+![image](https://github.com/user-attachments/assets/8589493b-db25-4f31-b9ec-7361d1328c6b)
+
+
 ## Test Coverage
 
 ![image](https://github.com/user-attachments/assets/b9ec0302-d98a-4924-bb5c-c3df850399b1)
