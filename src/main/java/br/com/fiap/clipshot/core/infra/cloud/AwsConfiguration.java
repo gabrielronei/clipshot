@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.cloud;
+package br.com.fiap.clipshot.core.infra.cloud;
 
 import br.com.fiap.clipshot.core.video.upload.storage.S3StorageGateway;
 import org.springframework.beans.factory.annotation.Value;

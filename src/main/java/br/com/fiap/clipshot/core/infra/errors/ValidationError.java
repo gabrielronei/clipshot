@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.errors;
+package br.com.fiap.clipshot.core.infra.errors;
 
 import java.util.ArrayList;
 import java.util.List;

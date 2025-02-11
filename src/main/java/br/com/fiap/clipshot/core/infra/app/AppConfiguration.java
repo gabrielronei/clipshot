@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.app;
+package br.com.fiap.clipshot.core.infra.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

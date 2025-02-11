@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.utils;
+package br.com.fiap.clipshot.core.infra.utils;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.utils;
+package br.com.fiap.clipshot.core.infra.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

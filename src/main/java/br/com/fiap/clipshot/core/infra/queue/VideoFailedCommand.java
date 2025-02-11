@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.queue;
+package br.com.fiap.clipshot.core.infra.queue;
 
 import java.util.UUID;
 

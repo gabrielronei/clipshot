@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.mail;
+package br.com.fiap.clipshot.core.infra.mail;
 
 public interface Mailer {
 

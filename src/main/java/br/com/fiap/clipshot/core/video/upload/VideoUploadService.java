@@ -1,6 +1,6 @@
 package br.com.fiap.clipshot.core.video.upload;
 
-import br.com.fiap.clipshot.core.infraestructure.queue.VideoQueueProducer;
+import br.com.fiap.clipshot.core.infra.queue.VideoQueueProducer;
 import br.com.fiap.clipshot.core.video.Video;
 import br.com.fiap.clipshot.core.video.VideoRepository;
 import br.com.fiap.clipshot.core.video.upload.storage.StorageGateway;

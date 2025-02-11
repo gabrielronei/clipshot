@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.errors;
+package br.com.fiap.clipshot.core.infra.errors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;

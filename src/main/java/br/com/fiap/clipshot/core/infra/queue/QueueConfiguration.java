@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.queue;
+package br.com.fiap.clipshot.core.infra.queue;
 
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;

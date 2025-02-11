@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.queue;
+package br.com.fiap.clipshot.core.infra.queue;
 
 import br.com.fiap.clipshot.core.video.Video;
 import br.com.fiap.clipshot.core.video.upload.storage.VideoUploadTask;

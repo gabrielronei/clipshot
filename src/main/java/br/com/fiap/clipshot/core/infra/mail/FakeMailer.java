@@ -1,4 +1,4 @@
-package br.com.fiap.clipshot.core.infraestructure.mail;
+package br.com.fiap.clipshot.core.infra.mail;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

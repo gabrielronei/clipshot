@@ -109,12 +109,13 @@
 						<exclude>br/com/fiap/clipshot/ClipshotApplication.class</exclude>
 						<exclude>br/com/fiap/clipshot/core/security/UserAuthenticationService.class</exclude>
 						<exclude>br/com/fiap/clipshot/core/security/JwtTokenService.class</exclude>
-						<exclude>br/com/fiap/clipshot/core/infraestructure/errors/**</exclude>
+						<exclude>br/com/fiap/clipshot/core/infra/errors/**</exclude>
 						<exclude>br/com/fiap/clipshot/core/video/NewVideoForm.class</exclude>
 						<exclude>br/com/fiap/clipshot/core/video/VideoController.class</exclude>
 						<exclude>br/com/fiap/clipshot/core/video/upload/**</exclude>
 						<exclude>br/com/fiap/clipshot/core/video/processor/**</exclude>
-						<exclude>br/com/fiap/clipshot/core/video/infraestructure/queue/**</exclude>
+						<exclude>br/com/fiap/clipshot/core/video/infra/queue/**</exclude>
+						<exclude>br/com/fiap/clipshot/core/infra/queue/FailedVideoConsumer.class</exclude>
 					</excludes>
 				</configuration>
 				<executions>

@@ -1,7 +1,7 @@
-package br.com.fiap.clipshot.core.infraestructure.queue;
+package br.com.fiap.clipshot.core.infra.queue;
 
-import br.com.fiap.clipshot.core.infraestructure.mail.Mailer;
-import br.com.fiap.clipshot.core.infraestructure.utils.JsonUtils;
+import br.com.fiap.clipshot.core.infra.mail.Mailer;
+import br.com.fiap.clipshot.core.infra.utils.JsonUtils;
 import br.com.fiap.clipshot.core.video.Video;
 import br.com.fiap.clipshot.core.video.VideoRepository;
 import jakarta.transaction.Transactional;
