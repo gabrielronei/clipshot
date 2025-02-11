@@ -4,14 +4,14 @@ import java.util.List;
 
 public class VideoProcessorResponse {
 
-    private final List<VideoResponse> videoResponse;
+    private final List<VideoResponse> videos;
 
-    public VideoProcessorResponse(List<VideoResponse> videoResponse) {
-        this.videoResponse = videoResponse;
+    public VideoProcessorResponse(List<VideoResponse> videos) {
+        this.videos = videos;
     }
 
-    public List<VideoResponse> getVideoResponse() {
-        return videoResponse;
+    public List<VideoResponse> getVideos() {
+        return videos;
     }
 
 

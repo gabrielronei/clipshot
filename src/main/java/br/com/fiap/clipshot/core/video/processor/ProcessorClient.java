@@ -23,7 +23,7 @@ public class ProcessorClient {
 
     public VideoProcessorResponse findAllBy(UserEntity user) {
         return this.restClient.get()
-                .uri("/video-processor/user/%s".formatted(user.getId()))
+                .uri("%s/user/%s".formatted(url, user.getId()))
                 .header("Authorization", "Bearer " + token)
                 .retrieve()
                 .body(VideoProcessorResponse.class);
@@ -31,8 +31,9 @@ public class ProcessorClient {
 
     public VideoResponse findBy(Video video) {
         return this.restClient.get()
-                .uri("/video-processor/user/%s/video/%s".formatted(video.getUser().getId(), video.getId()))
+                .uri("%s/user/%s/video/%s".formatted(url, video.getUser().getId(), video.getId()))
                 .header("Authorization", "Bearer " + token)
-                .retrieve().body(VideoResponse.class);
+                .retrieve()
+                .body(VideoResponse.class);
     }
 }

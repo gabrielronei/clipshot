@@ -24,7 +24,7 @@ public class VideoProcessorController {
         this.videoRepository = videoRepository;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/videos")
     public ResponseEntity list() {
         UserEntity currentUser = this.currentUser.getPossibleUser()
                 .orElseThrow(() -> new IllegalStateException("Possible user not found"));
@@ -32,7 +32,7 @@ public class VideoProcessorController {
         return ResponseEntity.ok(processorClient.findAllBy(currentUser));
     }
 
-    @GetMapping("/video-id/{videoId}")
+    @GetMapping("/videos/{videoId}")
     public ResponseEntity getOne(@PathVariable UUID videoId) {
         UserEntity currentUser = this.currentUser.getPossibleUser()
                 .orElseThrow(() -> new IllegalStateException("Possible user not found"));
