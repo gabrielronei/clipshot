@@ -2,6 +2,7 @@ package br.com.fiap.clipshot.core.video.upload.storage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import software.amazon.awssdk.core.sync.RequestBody;
@@ -13,6 +14,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
 @Service
+@Profile("!test")
 public class S3StorageGateway implements StorageGateway {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(S3StorageGateway.class);

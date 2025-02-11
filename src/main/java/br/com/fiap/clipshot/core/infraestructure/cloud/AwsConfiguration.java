@@ -2,8 +2,7 @@ package br.com.fiap.clipshot.core.infraestructure.cloud;
 
 import br.com.fiap.clipshot.core.video.upload.storage.S3StorageGateway;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
@@ -11,6 +10,7 @@ import software.amazon.awssdk.services.s3.S3Client;
 import java.net.URI;
 
 @Configuration
+@Profile("!test")
 public class AwsConfiguration {
 
     @Value("${aws.access.key.id}")
